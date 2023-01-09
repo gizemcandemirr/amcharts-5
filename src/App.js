@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+import ClusteredBarChart from './components/ClusteredBarChart';
+import DivergentStackedBars from './components/DivergentStackedBars';
+import StackedBarCart from './components/StackedBarChart';
+import VarianceIndicators from './components/VarianceIndicators';
+import VarianceIndicator from './components/VarianceIndicator';
+import PieofPieChart from './components/PieofPieChart';
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={{ display: 'flex' , marginBottom:'20px'}}>
+        <ClusteredBarChart />
+
+        <StackedBarCart />
+        {/* <DivergentStackedBars /> */}
+      </div>
+      <div style={{ display: 'flex' }}>
+        <VarianceIndicators />
+        <VarianceIndicator/>
+      </div>
+      <div style={{ display: 'flex' }}>
+        <PieofPieChart />
+      </div>
+    </>
+
   );
+
 }
 
 export default App;
